@@ -1,6 +1,7 @@
 # slice_pool
 decrease gc cost,self pool
 
+如果你的程序对实时性要求很高，不能仍受gc带来的卡顿可以考虑pool.go的思路
 如果你的程序因为内存中长驻大量对象导致gc 消耗cpu严重.可以考虑使用slice缓存数据减少gc开销了。
 pool.go写了一个将数据同一管理的pool类。方便项目代码的书写以及零散对象的管理
 s := map1.New(int64(i)).(*TestStruct)
